@@ -1,0 +1,131 @@
+*{
+    color: white;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-image: url("images/fondog.png");
+    width: 100%;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Escala la imagen para cubrir toda la página */
+    background-position: center; /* Centra la imagen en la página */
+    background-attachment: fixed; /* Hace que la imagen de fondo quede fija al hacer scroll */
+    margin: 0; /* Elimina márgenes por defecto del body */
+    padding: 0; /* Elimina padding por defecto del body */
+    height: 100vh;
+    position: relative;
+}
+
+.lo{
+    margin-top: 7px;
+    max-width: 310px;
+    height: auto ;
+        text-align: center;
+        
+}
+
+.lexsoundcabeza{
+    margin-top: 30px;
+    
+}
+
+.LAW{
+    margin-top: 25px;
+
+    font-size: 42px;
+    
+}
+
+
+.hello{
+    font-weight: bold;
+    margin-bottom: 50px;
+    
+}
+
+.myportfolio{
+
+    font-weight: bold;
+    
+    font-size: 32px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+
+}
+
+.trabajos {
+    display: inline-block; /* Hace que el contenedor del proyecto sea un bloque en línea */
+    background-color: rgba(72, 48, 23, 0.7); /* Fondo oscuro semi-transparente */
+    color: white;
+    padding: 20px;
+    margin: 20px 10px; /* Margen vertical y horizontal */
+    border-radius: 15px;
+    width: 30%; 
+    max-width: 600px; 
+}
+
+.soc{
+    margin-top: 42px;
+    font-size: 25px;
+}
+
+.boton-redondeado {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #af0e0e; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* bordes redondeados */
+    margin-bottom: 120px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Efecto transición */
+    position: center; /* Posicionar imagen */
+}
+
+/* Cambia el color del botón al pasar el mouse */
+.boton-redondeado:hover {
+    background-color: #a04545;
+}
+
+/* Estilos de la imagen dentro del botón */
+.boton-redondeado img {
+    height:40px; /* Ajusta la altura de la imagen */
+    width: 40px; /* Mantiene la proporción de la imagen */
+     /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    object-fit: contain;
+}
+
+.correo{
+    margin-top: 42px;
+    
+    font-weight: bold;
+    
+    font-size: 32px;
+    
+}
+
+.btn{
+    display: center;
+    padding: 10px 15px;
+    background-color: #af0e0e; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Hace que los bordes sean redondeados */
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Efecto de transición */
+    position: center;
+    background-color: #af0e0e;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.btn:hover{
+    background-color: #a04545;
+}
