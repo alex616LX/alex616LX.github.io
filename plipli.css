@@ -1,4 +1,12 @@
+html, body {
+    height: 100%; /* Asegura que html y body cubran toda la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
 *{
+    position: relative; /* Todo el contenido debe estar por encima de la capa */
+    z-index: 2;
     color: white;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -15,7 +23,20 @@ body{
     margin: 0; /* Elimina márgenes por defecto del body */
     padding: 0; /* Elimina padding por defecto del body */
     height: 100vh;
-    position: relative;
+    position: relative; 
+   
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente */
+    z-index: 1; /* La capa negra */
+    pointer-events: none;
 }
 
 .lo{
