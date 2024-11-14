@@ -101,7 +101,6 @@ body::before {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.15s; /* Efecto transición */
-    position: center; /* Posicionar imagen */
 }
 
 /* Cambia el color del botón al pasar el mouse */
@@ -111,12 +110,13 @@ body::before {
 
 /* Estilos de la imagen dentro del botón */
 .boton-redondeado img {
-    height:40px; /* Ajusta la altura de la imagen */
-    width: 40px; /* Mantiene la proporción de la imagen */
-    vertical-align: middle; /* Alinea la imagen con el texto */
+    height:41px; /* Ajusta la altura de la imagen */
+    width: 41px; /* Mantiene la proporción de la imagen */
     object-fit: contain;
 }
-
+.boton-redondeado:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
 .correo{
     margin-top: 42px;
     font-size: 32px;
