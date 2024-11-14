@@ -100,7 +100,7 @@ body::before {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s; /* Efecto transición */
+    transition: background-color 0.15s; /* Efecto transición */
     position: center; /* Posicionar imagen */
 }
 
@@ -126,21 +126,23 @@ body::before {
 .btn{
     display: center;
     padding: 10px 15px;
-    background-color: #af0e0e; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 50px; /* Hace que los bordes sean redondeados */
+    background-color: #af0e0e; 
+    color: white; 
+    border: none; 
+    border-radius: 50px; 
     font-size: 22px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s; /* Efecto de transición */
+    transition: background-color 0.15s; 
     position: center;
     background-color: #af0e0e;
     margin-top: 20px;
     margin-bottom: 35px;
+    text-decoration: underline;
 }
 
 .btn:hover{
     background-color: #a04545;
+    font-size: 23px;
 }
