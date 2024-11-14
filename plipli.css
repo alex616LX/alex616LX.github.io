@@ -140,6 +140,8 @@ body::before {
     margin-top: 20px;
     margin-bottom: 35px;
     text-decoration: underline;
+    height: 45px;  /* Un poco más que el valor estimado de 42px */
+    width: 158px;
 }
 
 .btn:hover{
