@@ -3,6 +3,10 @@ html, body {
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family: clint maker;
+    src: url(fonts/Clint\ Marker.ttf);
+}
 
 *{
     position: relative; /* Todo el contenido debe estar por encima de la capa */
@@ -52,7 +56,7 @@ body::before {
 
 .LAW{
     margin-top: 25px;
-
+    min-height: 60px;
     font-size: 42px;
     
 }
@@ -106,6 +110,8 @@ body::before {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.15s; /* Efecto transición */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
+    border: 1px solid #0000009d; 
 }
 
 /* Cambia el color del botón al pasar el mouse */
@@ -133,7 +139,7 @@ body::before {
     padding: 10px 15px;
     background-color: #af0e0e; 
     color: white; 
-    border: none; 
+    border: 1px solid #0000009d; 
     border-radius: 50px; 
     font-size: 22px;
     cursor: pointer;
@@ -147,9 +153,38 @@ body::before {
     text-decoration: underline;
     height: 45px;  /* Un poco más que el valor estimado de 42px */
     width: 158px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
 }
 
 .btn:hover{
     background-color: #a04545;
     font-size: 23px;
+}
+.Lexsound:hover .S{
+font-family: Clint maker;
+text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
+text-transform: uppercase;
+}
+.Lexsound:hover {
+    font-family: Clint maker;
+    text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    }
+   
+.S {
+        display: inline-block; /* Permite tratar la 'S' como un bloque independiente */
+        transition: all 0.3s ease; /* Suaviza el cambio de tamaño y posición */
+    }
+.S:hover {
+    font-family: Clint maker;
+    text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #872d2d;
+    position: relative; /* Solo afecta a la letra S */
+    top: 6px;
+    margin-top: -10px; 
+}
+.Lexsound, .S {
+    transition: font-family 0.5s ease-in,font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
