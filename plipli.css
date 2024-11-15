@@ -6,6 +6,7 @@ html, body {
 @font-face {
     font-family: clint maker;
     src: url(fonts/Clint\ Marker.ttf);
+    
 }
 
 *{
@@ -118,6 +119,10 @@ body::before {
 .boton-redondeado:hover {
     background-color: #a04545;
 }
+.boton-redondeado:active {
+    background-color: #7f0a0a; /* Rojo oscuro */
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
+}
 
 /* Estilos de la imagen dentro del botón */
 .boton-redondeado img {
@@ -157,9 +162,20 @@ body::before {
 }
 
 .btn:hover{
-    background-color: #a04545;
+    background-color: #e63946; /* Rojo más vibrante */
     font-size: 23px;
 }
+.btn:active {
+    background-color: #7f0a0a; /* Rojo oscuro */
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
+}
+.btn, .boton-redondeado {
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:active, .boton-redondeado:active {
+    transform: scale(0.97); /* Botón ligeramente más pequeño */
+}
+
 .Lexsound:hover .S{
 font-family: Clint maker;
 text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
