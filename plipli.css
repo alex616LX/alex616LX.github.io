@@ -72,7 +72,7 @@ body::before {
 
 .trabajos {
     display: inline-block; /* Hace que el contenedor del proyecto sea un bloque en línea */
-    background-color: rgba(72, 48, 23, 0.7); /* Fondo oscuro semi-transparente */
+    background-color: rgba(61, 41, 19, 0.7); /* Fondo oscuro semi-transparente */
     color: white;
     padding: 20px;
     margin: 20px 10px; /* Margen vertical y horizontal */
@@ -80,6 +80,11 @@ body::before {
     width: 30%; 
     max-width: 600px;
     font-size: 18px;
+}
+.trabajos:hover {
+    background-color: rgba(62, 42, 20, 0.778); /* Fondo más oscuro cuando el cursor está encima */
+    transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+    box-shadow: 2px 5px 16px rgba(0, 0, 0, 0.5); /* Añade una sombra suave */
 }
 
 .soc{
