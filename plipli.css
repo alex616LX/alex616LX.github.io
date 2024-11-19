@@ -3,13 +3,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: clint maker;
     src: url(fonts/Clint\ Marker.ttf);
-    
 }
 
-*{
+* {
     position: relative; /* Todo el contenido debe estar por encima de la capa */
     z-index: 2;
     color: white;
@@ -19,7 +19,7 @@ html, body {
     line-height: 1.1;
 }
 
-body{
+body {
     background-image: url("images/fondog.png");
     width: 100%;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -39,42 +39,52 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.48); /* Capa negra semitransparente */
     z-index: 1; /* La capa negra */
     pointer-events: none;
 }
 
-.lo{
+#imagentitulo {
+    perspective: 800px;
+}
+
+.lo {
     margin-top: 7px;
     max-width: 310px;
-    height: auto ;
-        text-align: center;
-    }
+    height: auto;
+    text-align: center;
+    box-shadow: 
+    0 0 15px 5px rgba(192, 192, 192, 0.6), 
+    0 0 20px 10px rgba(211, 211, 211, 0.5), 
+    0 0 30px 10px rgba(245, 245, 245, 0.4); 
+    border-radius: 160px; 
+    transition: transform 1s ease; 
+    transform-style: preserve-3d;
+}
 
-.lexsoundcabeza{
+.lo:hover {
+    transform: rotateY(360deg); /* Hace que la imagen gire una vuelta completa */
+}
+
+.lexsoundcabeza {
     margin-top: 30px;
 }
 
-.LAW{
+.LAW {
     margin-top: 25px;
     min-height: 60px;
     font-size: 42px;
-    
 }
 
-
-.hello{
+.hello {
     margin-bottom: 50px;
-    
 }
 
-.myportfolio{ 
+.myportfolio { 
     font-size: 32px;
     margin-top: 45px;
     margin-bottom: 20px;
-
 }
-
 .trabajos {
     display: inline-block; /* Hace que el contenedor del proyecto sea un bloque en línea */
     background-color: rgba(61, 41, 19, 0.7); /* Fondo oscuro semi-transparente */
@@ -85,18 +95,22 @@ body::before {
     width: 30%; 
     max-width: 600px;
     font-size: 18px;
+    position: relative; /* Permite el posicionamiento de la reseña */
+    z-index: 1; /* Bajo z-index para que el recuadro de trabajo esté debajo */
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: visible; /* Asegura que no se corte el contenido */
 }
 .trabajos:hover {
     background-color: rgba(62, 42, 20, 0.778); /* Fondo más oscuro cuando el cursor está encima */
     transform: scale(1.01); /* Aumenta ligeramente el tamaño */
     box-shadow: 2px 5px 16px rgba(0, 0, 0, 0.5); /* Añade una sombra suave */
 }
-
-.soc{
+.soc {
     margin-top: 42px;
     font-size: 25px;
 }
-.pp{
+
+.pp {
     font-size: 21px;
 }
 
@@ -119,6 +133,7 @@ body::before {
 .boton-redondeado:hover {
     background-color: #a04545;
 }
+
 .boton-redondeado:active {
     background-color: #7f0a0a; /* Rojo oscuro */
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
@@ -130,16 +145,17 @@ body::before {
     width: 41px; /* Mantiene la proporción de la imagen */
     object-fit: contain;
 }
+
 .boton-redondeado:hover img {
     transform: scale(1.1); /* Aumenta el tamaño en un 10% */
 }
-.correo{
+
+.correo {
     margin-top: 42px;
     font-size: 32px;
-    
 }
 
-.btn{
+.btn {
     display: center;
     padding: 10px 15px;
     background-color: #af0e0e; 
@@ -156,41 +172,46 @@ body::before {
     margin-top: 20px;
     margin-bottom: 35px;
     text-decoration: underline;
-    height: 45px;  /* Un poco más que el valor estimado de 42px */
+    height: 45px;
     width: 158px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #e63946; /* Rojo más vibrante */
     font-size: 23px;
 }
+
 .btn:active {
     background-color: #7f0a0a; /* Rojo oscuro */
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
 }
+
 .btn, .boton-redondeado {
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 .btn:active, .boton-redondeado:active {
     transform: scale(0.97); /* Botón ligeramente más pequeño */
 }
 
-.Lexsound:hover .S{
-font-family: Clint maker;
-text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
-text-transform: uppercase;
+.Lexsound:hover .S {
+    font-family: Clint maker;
+    text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
 }
+
 .Lexsound:hover {
     font-family: Clint maker;
     text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
-    }
-   
+}
+
 .S {
-        display: inline-block; /* Permite tratar la 'S' como un bloque independiente */
-        transition: all 0.3s ease; /* Suaviza el cambio de tamaño y posición */
-    }
+    display: inline-block; /* Permite tratar la 'S' como un bloque independiente */
+    transition: all 0.3s ease; /* Suaviza el cambio de tamaño y posición */
+}
+
 .S:hover {
     font-family: Clint maker;
     text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
@@ -201,6 +222,7 @@ text-transform: uppercase;
     top: 6px;
     margin-top: -10px; 
 }
+
 .Lexsound, .S {
-    transition: font-family 0.5s ease-in,font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+    transition: font-family 0.5s ease-in, font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
