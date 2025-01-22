@@ -39,7 +39,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.48); /* Capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.42); /* Capa negra semitransparente */
     z-index: 1; /* La capa negra */
     pointer-events: none;
 }
@@ -50,7 +50,7 @@ body::before {
 
 .lo {
     margin-top: 7px;
-    max-width: 310px;
+    max-width: 300px;
     height: auto;
     text-align: center;
     box-shadow: 
@@ -86,9 +86,9 @@ body::before {
     margin-bottom: 20px;
 }
 .trabajos {
-    display: inline-block; /* Hace que el contenedor del proyecto sea un bloque en línea */
+    display: inline-block;/* Hace que el contenedor del proyecto sea un bloque en línea */
     background-color: rgba(61, 41, 19, 0.7); /* Fondo oscuro semi-transparente */
-    color: white;
+    color: #fff8e5;
     padding: 20px;
     margin: 20px 10px; /* Margen vertical y horizontal */
     border-radius: 15px;
@@ -117,7 +117,7 @@ body::before {
 .boton-redondeado {
     display: inline-block;
     padding: 10px 10px;
-    background-color: #af0e0e; /* Color de fondo */
+    background-color: rgb(130, 44, 43); /* Color de fondo */
     border: none; /* Sin borde */
     border-radius: 50px; /* bordes redondeados */
     margin-bottom: 120px;
@@ -131,11 +131,11 @@ body::before {
 
 /* Cambia el color del botón al pasar el mouse */
 .boton-redondeado:hover {
-    background-color: #a04545;
+    background-color: #b42430;
 }
 
 .boton-redondeado:active {
-    background-color: #7f0a0a; /* Rojo oscuro */
+    background-color: #760808; /* Rojo oscuro */
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
 }
 
@@ -158,7 +158,7 @@ body::before {
 .btn {
     display: center;
     padding: 10px 15px;
-    background-color: #af0e0e; 
+    background-color: rgb(130, 44, 43); 
     color: white; 
     border: 1px solid #0000009d; 
     border-radius: 50px; 
@@ -168,22 +168,20 @@ body::before {
     text-decoration: none;
     transition: background-color 0.15s; 
     position: center;
-    background-color: #af0e0e;
     margin-top: 20px;
     margin-bottom: 35px;
-    text-decoration: underline;
     height: 45px;
     width: 158px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
 }
 
 .btn:hover {
-    background-color: #e63946; /* Rojo más vibrante */
+    background-color: #b52631; /* Rojo más vibrante */
     font-size: 23px;
 }
 
 .btn:active {
-    background-color: #7f0a0a; /* Rojo oscuro */
+    background-color: #790707; /* Rojo oscuro */
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
 }
 
@@ -226,3 +224,5 @@ body::before {
 .Lexsound, .S {
     transition: font-family 0.5s ease-in, font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
+
+
