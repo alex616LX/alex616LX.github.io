@@ -8,6 +8,10 @@ html, body {
     font-family: clint maker;
     src: url(fonts/Clint\ Marker.ttf);
 }
+@font-face {
+    font-family: itc-franklin-gothic-lt-demi-condensed;
+    src: url(fonts/itc-franklin-gothic-lt-demi-condensed.ttf);
+}
 
 * {
     position: relative; /* Todo el contenido debe estar por encima de la capa */
@@ -15,8 +19,9 @@ html, body {
     color: white;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: itc-franklin-gothic-lt-demi-condensed;
     line-height: 1.1;
+    letter-spacing: 0.034em;
 }
 
 body {
@@ -78,6 +83,7 @@ body::before {
 
 .hello {
     margin-bottom: 50px;
+
 }
 
 .myportfolio { 
@@ -93,7 +99,7 @@ body::before {
     margin: 20px 10px; /* Margen vertical y horizontal */
     border-radius: 15px;
     width: auto;
-    font-size: 18px;
+    font-size: 21px;
     position: relative; /* Permite el posicionamiento de la reseña */
     z-index: 1; /* Bajo z-index para que el recuadro de trabajo esté debajo */
     transition: box-shadow 0.3s ease-in-out;
@@ -110,7 +116,7 @@ body::before {
 }
 
 .pp {
-    font-size: 21px;
+    font-size: 23px;
 }
 
 .boton-redondeado {
