@@ -201,18 +201,17 @@ margin: 121px;
     font-size: 23px;
 }
 
-.btn:active,.btn2 {
+.btn:active,.btn2:active {
     background-color: #790707; /* Rojo oscuro */
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
+    transform: scale(0.97); /* Botón ligeramente más pequeño */
 }
 
 .btn, .btn2 {
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn:active, .bt2:active {
-    transform: scale(0.97); /* Botón ligeramente más pequeño */
-}
+
 
 .Lexsound:hover .S {
     font-family: Clint maker;
