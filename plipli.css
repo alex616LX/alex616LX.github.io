@@ -200,24 +200,28 @@ body::before {
     cursor: pointer;
     display: flex;
     align-items: center; /* Centra verticalmente */
-  justify-content: center;
+    justify-content: center;
     width: auto;
     margin: 20px 500px;
     transition: background-color 0.10s;
 }
+
 .btn2 img {
     height: 70%;
     width: auto;
 
-  }
-  .btn2 img:first-of-type {
+}
+
+.btn2 img:first-of-type {
     margin-left: 12px; 
     /* Ajusta el valor según lo necesites */
-  }
-  .btn2 img:last-of-type {
+}
+
+.btn2 img:last-of-type {
     margin-right: 5px; 
     /* Ajusta el valor según lo necesites */
-  }
+}
+/* hey*/
 .footy{
 margin: 121px;
 }
