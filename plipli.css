@@ -16,6 +16,7 @@ html, body {
 * {
     position: relative; /* Todo el contenido debe estar por encima de la capa */
     z-index: 2;
+    align-items: center;
     color: white;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -131,12 +132,15 @@ body::before {
 }
 
 .btn {
-    position: center;
-    cursor: pointer;
-    display: flex;
-    align-items: center; /* Centra verticalmente */
+  flex-grow: 1;
+    display: flex; /* O block, según necesites */
+    margin: 5px auto;        /* Centra horizontalmente */
+    max-width: 350px; 
+    align-items:center; /* Centra verticalmente */
     justify-content: center;
-    padding: 10px 15px;
+    flex-wrap: wrap;
+    min-width: 280px;
+    padding: 20px 80px;
     background-color: rgb(130, 44, 43); 
     color: white; 
     border: 1px solid #0000009d; 
@@ -145,17 +149,24 @@ body::before {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.15s; 
-    margin-top: 50px;
+   margin-top: 37px;
     margin-bottom: 52px;
-    margin-left: 500px;
-    margin-right: 500px;
-    height: 45px;
+    position: center;
+    cursor: pointer;
     width: auto;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
 }
 
 .btn2 {
-    padding: 10px 15px;
+    flex-grow: 1;
+    display: flex; /* O block, según necesites */
+    margin: 5px auto;        /* Centra horizontalmente */
+    max-width: 350px; 
+    min-width: 280px;  
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 80px;
     background-color: rgb(130, 44, 43); 
     color: white; 
     border: 1px solid #0000009d; 
@@ -164,21 +175,19 @@ body::before {
     text-align: center;
     text-decoration: none;
     position: center;
-    margin-top: 20px;
     height: 42px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);  
     cursor: pointer;
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center;
     width: auto;
-    margin: 20px 500px;
+    white-space: nowrap;
     transition: background-color 0.10s;
 }
 
 .btn2 img {
     height: 70%;
     width: auto;
+     /* Centra verticalmente */
+
 
 }
 
