@@ -36,6 +36,8 @@ body {
     padding: 0; /* Elimina padding por defecto del body */
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 body::before {
@@ -55,8 +57,8 @@ body::before {
 }
 
 .lo {
-    margin-top: 7px;
-    max-width: 300px;
+    margin-top: 35px;
+    max-width: 280px;
     height: auto;
     text-align: center;
     box-shadow: 
@@ -135,8 +137,8 @@ body::before {
   flex-grow: 1;
     display: flex; /* O block, según necesites */
     margin: 5px auto;        /* Centra horizontalmente */
-    max-width: 350px; 
-    align-items:center; /* Centra verticalmente */
+    max-width: 320px; 
+     /* Centra verticalmente */
     justify-content: center;
     flex-wrap: wrap;
     min-width: 280px;
@@ -161,9 +163,8 @@ body::before {
     flex-grow: 1;
     display: flex; /* O block, según necesites */
     margin: 5px auto;        /* Centra horizontalmente */
-    max-width: 350px; 
-    min-width: 280px;  
-    align-items: center; /* Centra verticalmente */
+    max-width: 320px; 
+    min-width: 280px;   /* Centra verticalmente */
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px 80px;
@@ -203,6 +204,7 @@ body::before {
 /* hey*/
 .footy{
 margin: 121px;
+width: 100%;
 }
 
 .btn:hover,.btn2:hover {
