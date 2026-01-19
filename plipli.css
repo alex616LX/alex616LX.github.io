@@ -3,29 +3,23 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
 @font-face {
     font-family: clint maker;
     src: url(fonts/Clint\ Marker.ttf);
-}
-@font-face {
-    font-family: itc-franklin-gothic-lt-demi-condensed;
-    src: url(fonts/itc-franklin-gothic-lt-demi-condensed.ttf);
+    
 }
 
-* {
+*{
     position: relative; /* Todo el contenido debe estar por encima de la capa */
     z-index: 2;
-    align-items: center;
     color: white;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
-    font-family: itc-franklin-gothic-lt-demi-condensed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.1;
-    letter-spacing: 0.032em;
 }
 
-body {
+body{
     background-image: url("images/fondog.png");
     width: 100%;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -36,8 +30,6 @@ body {
     padding: 0; /* Elimina padding por defecto del body */
     height: 100vh;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 body::before {
@@ -47,19 +39,15 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.43); /* Capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.48); /* Capa negra semitransparente */
     z-index: 1; /* La capa negra */
     pointer-events: none;
 }
 
-#imagentitulo {
-    perspective: 800px;
-}
-
-.lo {
-    margin-top: 35px;
-    max-width: 280px;
-    height: auto;
+.lo{
+    margin-top: 7px;
+    max-width: 310px;
+    height: auto ;
     text-align: center;
     box-shadow: 
     0 0 15px 5px rgba(192, 192, 192, 0.6), 
@@ -70,39 +58,49 @@ body::before {
     transform-style: preserve-3d;
 }
 
-.lo:hover {
+.lo:hover{
+    
     transform: rotateY(360deg); /* Hace que la imagen gire una vuelta completa */
+    
 }
-
-.lexsoundcabeza {
+.lexsoundcabeza{
     margin-top: 30px;
 }
 
-.LAW {
+.LAW{
     margin-top: 25px;
     min-height: 60px;
-    font-size: 42px;
+    font-size: 43px;
+    
 }
 
-.hello {
+
+.hello{
     margin-bottom: 50px;
-
+    font-size: 25px;
+    
 }
 
-.myportfolio { 
-    font-size: 32px;
+.myportfolio{ 
+    font-size: 33px;
     margin-top: 45px;
     margin-bottom: 20px;
+
 }
+#imagentitulo{
+    perspective: 800px;
+}
+
 .trabajos {
-    display: inline-block;/* Hace que el contenedor del proyecto sea un bloque en línea */
+    display: inline-block; /* Hace que el contenedor del proyecto sea un bloque en línea */
     background-color: rgba(61, 41, 19, 0.7); /* Fondo oscuro semi-transparente */
-    color: #fff8e5;
-    padding: 20px 23px;
+    color: white;
+    padding: 20px;
     margin: 20px 10px; /* Margen vertical y horizontal */
     border-radius: 15px;
-    width: auto;
-    font-size: 21px;
+    width: 30%; 
+    max-width: 600px;
+    font-size: 19px;
     position: relative; /* Permite el posicionamiento de la reseña */
     z-index: 1; /* Bajo z-index para que el recuadro de trabajo esté debajo */
     transition: box-shadow 0.3s ease-in-out;
@@ -113,134 +111,152 @@ body::before {
     transform: scale(1.01); /* Aumenta ligeramente el tamaño */
     box-shadow: 2px 5px 16px rgba(0, 0, 0, 0.5); /* Añade una sombra suave */
 }
-.soc {
-    margin-top: 42px;
-    font-size: 25px;
+.review-slide {
+ 
+    position: absolute; /* Posiciona la reseña fuera del flujo */
+    top: 0;
+    left: 100%; /* Empuja la reseña fuera del recuadro */
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 10; /* Asegura que la reseña se superponga sobre los recuadros */
+    border-radius: 10px;
+}
+.review-slide, .review-slide * {
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+}
+.review-author{
+    color: rgb(53, 53, 255);
 }
 
-.pp {
+/* Cuando el trabajo es hover, la reseña se desliza */
+.trabajos:hover .review-slide {
+    left: -41%; /* Posiciona la reseña al lado derecho */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Efecto deslizante */
+    z-index: 20; /* Hace que la reseña esté encima de otros recuadros */
+}
+
+.trabajos.resaltado {
+    background-color: rgba(62, 42, 20, 0.778); /* Fondo más oscuro */
+    transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+    box-shadow: 
+    0 0 5px rgba(204, 153, 102, 0.5),   /* Resplandor suave café claro */
+    0 0 10px rgba(204, 153, 102, 0.7),  /* Resplandor más fuerte y cálido */
+    0 0 15px rgba(204, 153, 102, 0.9),  /* Resplandor más difuso en tono café */
+    0 0 20px rgba(204, 153, 102, 1);    /* Resplandor brillante con tono café */
+    border: 2px solid rgba(62, 42, 20, 0.778); /* Borde iluminado que coincide con el color */
+/* Resplandor del borde */
+}
+
+
+.soc{
+    margin-top: 42px;
+    font-size: 26px;
+}
+.pp{
     font-size: 23px;
 }
 
+.boton-redondeado {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #af0e0e; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* bordes redondeados */
+    margin-bottom: 120px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s; /* Efecto transición */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
+    border: 1px solid #0000009d; 
+}
 
 /* Cambia el color del botón al pasar el mouse */
-.b:hover {
-    background-color: #b42430;
+.boton-redondeado:hover {
+    background-color: #a04545;
+}
+.boton-redondeado:active {
+    background-color: #7f0a0a; /* Rojo oscuro */
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
 }
 
-.correo {
+/* Estilos de la imagen dentro del botón */
+.boton-redondeado img {
+    height:41px; /* Ajusta la altura de la imagen */
+    width: 41px; /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+}
+.boton-redondeado:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
+.correo{
     margin-top: 42px;
-    font-size: 32px;
+    font-size: 33px;
+    
 }
 
-.btn {
-  flex-grow: 1;
-    display: flex; /* O block, según necesites */
-    margin: 5px auto;        /* Centra horizontalmente */
-    max-width: 320px; 
-     /* Centra verticalmente */
-    justify-content: center;
-    flex-wrap: wrap;
-    min-width: 280px;
-    padding: 20px 80px;
-    background-color: rgb(130, 44, 43); 
+.btn{
+    display: center;
+    padding: 10px 15px;
+    background-color: #af0e0e; 
     color: white; 
     border: 1px solid #0000009d; 
     border-radius: 50px; 
-    font-size: 23px;
+    font-size: 22px;
+    cursor: pointer;
     text-align: center;
     text-decoration: none;
     transition: background-color 0.15s; 
-   margin-top: 37px;
-    margin-bottom: 52px;
     position: center;
-    cursor: pointer;
-    width: auto;
+    background-color: #af0e0e;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-decoration: underline;
+    height: 45px;  /* Un poco más que el valor estimado de 42px */
+    width: 158px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);
 }
 
-.btn2 {
-    flex-grow: 1;
-    display: flex; /* O block, según necesites */
-    margin: 5px auto;        /* Centra horizontalmente */
-    max-width: 320px; 
-    min-width: 280px;   /* Centra verticalmente */
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px 80px;
-    background-color: rgb(130, 44, 43); 
-    color: white; 
-    border: 1px solid #0000009d; 
-    border-radius: 50px; 
-    font-size: 23px;
-    text-align: center;
-    text-decoration: none;
-    position: center;
-    height: 42px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.722), 0px -1px 1px rgba(0, 0, 0, 0.722);  
-    cursor: pointer;
-    width: auto;
-    white-space: nowrap;
-    transition: background-color 0.10s;
-}
-
-.btn2 img {
-    height: 70%;
-    width: auto;
-     /* Centra verticalmente */
-
-
-}
-
-.btn2 img:first-of-type {
-    margin-left: 12px; 
-    /* Ajusta el valor según lo necesites */
-}
-
-.btn2 img:last-of-type {
-    margin-right: 5px; 
-    /* Ajusta el valor según lo necesites */
-}
-/* hey*/
-.footy{
-margin: 121px;
-width: 100%;
-}
-
-.btn:hover,.btn2:hover {
-    background-color: #b52631; /* Rojo más vibrante */
+.btn:hover{
+    background-color: #e63946; /* Rojo más vibrante */
     font-size: 23px;
 }
-
-.btn:active,.btn2:active {
-    background-color: #790707; /* Rojo oscuro */
+.btn:active {
+    background-color: #7f0a0a; /* Rojo oscuro */
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto presionado */
+}
+.btn, .boton-redondeado {
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:active, .boton-redondeado:active {
     transform: scale(0.97); /* Botón ligeramente más pequeño */
 }
 
-.btn, .btn2 {
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-
-
-.Lexsound:hover .S {
-    font-family: Clint maker;
-    text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
+.Lexsound:hover .S{
+font-family: Clint maker;
+text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
+text-transform: uppercase;
 }
 
 .Lexsound:hover {
     font-family: Clint maker;
     text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
-}
+    }
 
 .S {
-    display: inline-block; /* Permite tratar la 'S' como un bloque independiente */
-    transition: all 0.3s ease; /* Suaviza el cambio de tamaño y posición */
-}
-
+        display: inline-block; /* Permite tratar la 'S' como un bloque independiente */
+        transition: all 0.3s ease; /* Suaviza el cambio de tamaño y posición */
+    }
 .S:hover {
     font-family: Clint maker;
     text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
@@ -251,88 +267,6 @@ width: 100%;
     top: 6px;
     margin-top: -10px; 
 }
-
 .Lexsound, .S {
-    transition: font-family 0.5s ease-in, font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Media Query para pantallas menores a 400px */
-@media only screen and (max-width: 400px) {
-    /* Ajustes generales */
-    * {
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-    }
-    
-    /* Logo y título */
-    .lo {
-        max-width: 200px;
-        margin-top: 20px;
-    }
-    
-    .LAW {
-        font-size: 28px;
-        margin-top: 15px;
-    }
-    
-    /* Texto de presentación */
-    .hello {
-        font-size: 18px;
-        line-height: 1.3;
-        margin: 20px 10px;
-    }
-    
-    /* Sección de portfolio */
-    .myportfolio {
-        font-size: 24px;
-        margin-top: 30px;
-    }
-    
-    .trabajos {
-        width: 85%;
-        margin: 15px auto;
-        padding: 15px;
-        font-size: 16px;
-    }
-    
-    /* Sección de contacto */
-    .correo {
-        font-size: 24px;
-        margin-top: 30px;
-    }
-    
-    .pp {
-        font-size: 16px;
-        margin: 10px;
-    }
-    
-    .btn2 {
-        padding: 15px 40px;
-        font-size: 18px;
-        min-width: 200px;
-    }
-    .btn{
-  padding: 18px 40px;
-        font-size: 18px;
-        min-width: 50px;
-        margin: 14px;
-    }
-    /* Sección de redes sociales */
-    .soc {
-        font-size: 20px;
-        margin-top: 30px;
-    }
-    
-    .btn2 img {
-        height: 60%;
-    }
-    
-    /* Footer */
-    .footy {
-        margin: 60px 0;
-    }
-    
-    /* Ajustes para los elementos de audio */
-    audio {
-        width: 100%;
-    }
+    transition: font-family 0.5s ease-in,font-size 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
