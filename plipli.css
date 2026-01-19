@@ -113,6 +113,51 @@ body::before {
     transform: scale(1.01); /* Aumenta ligeramente el tamaño */
     box-shadow: 2px 5px 16px rgba(0, 0, 0, 0.5); /* Añade una sombra suave */
 }
+
+.review-slide {
+ 
+    position: absolute; /* Posiciona la reseña fuera del flujo */
+    top: 0;
+    left: 100%; /* Empuja la reseña fuera del recuadro */
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 10; /* Asegura que la reseña se superponga sobre los recuadros */
+    border-radius: 10px;
+}
+.review-slide, .review-slide * {
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+}
+.review-author{
+    color: rgb(53, 53, 255);
+}
+
+/* Cuando el trabajo es hover, la reseña se desliza */
+.trabajos:hover .review-slide {
+    left: -41%; /* Posiciona la reseña al lado derecho */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Efecto deslizante */
+    z-index: 20; /* Hace que la reseña esté encima de otros recuadros */
+}
+
+.trabajos.resaltado {
+    background-color: rgba(62, 42, 20, 0.778); /* Fondo más oscuro */
+    transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+    box-shadow: 
+    0 0 5px rgba(204, 153, 102, 0.5),   /* Resplandor suave café claro */
+    0 0 10px rgba(204, 153, 102, 0.7),  /* Resplandor más fuerte y cálido */
+    0 0 15px rgba(204, 153, 102, 0.9),  /* Resplandor más difuso en tono café */
+    0 0 20px rgba(204, 153, 102, 1);    /* Resplandor brillante con tono café */
+    border: 2px solid rgba(62, 42, 20, 0.778); /* Borde iluminado que coincide con el color */
+/* Resplandor del borde */
+}
 .soc {
     margin-top: 42px;
     font-size: 25px;
